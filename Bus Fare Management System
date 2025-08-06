@@ -1,0 +1,78 @@
+
+Scenario: Bus Fare Management System
+
+A travel company wants to create a basic system to manage fare collections and passenger records for its daily city buses.
+
+Each bus can carry a maximum of 50 passengers. For every passenger, the fare is calculated based on the distance they travel. The fare rate is ₹5 per kilometer.
+
+You are required to design a Java program to handle the following:
+
+1. Create a class Passenger with the following:
+
+    Instance variables: name, pickupPoint, dropPoint, distance, fare
+    distance and fare are calculated based on pickup and drop points
+    Use a method to accept passenger details using the Scanner class
+    Use a method to calculate the distance and fare (distance = dropPoint - pickupPoint, fare = distance * 5)
+    Use a method to return/display passenger details
+
+2. Maintain a static variable in the Passenger class:
+
+    totalFareCollected – to store the total fare collected from all passengers
+    It should update every time a new passenger's fare is calculated
+
+3. In the main class:
+
+    Create an array of 50 Passenger objects (or less based on user input)
+    Allow the user to enter how many passengers are boarding (limit: 50)
+    For each passenger, input name, pickup point (1 to 10), and drop point (greater than pickup)
+    After processing all passengers:
+
+      Display each passenger's details
+      Display the total fare collected
+      Display the passenger who paid the maximum fare
+
+Constraints:
+
+ Pickup and drop points are integers from 1 to 10
+ Distance = dropPoint - pickupPoint
+ Fare = distance × ₹5
+ 
+
+Sample I/p and Output
+Enter number of passengers (max 50): 3
+
+Enter details for Passenger 1
+Name: Ramesh
+Pickup Point (1-10): 3
+Drop Point (must be > 3): 7
+
+Enter details for Passenger 2
+Name: Sita
+Pickup Point (1-10): 2
+Drop Point (must be > 2): 5
+
+Enter details for Passenger 3
+Name: John
+Pickup Point (1-10): 1
+Drop Point (must be > 1): 10
+
+Passenger Details:
+------------------
+Name: Ramesh
+Pickup: 3, Drop: 7
+Distance: 4 km
+Fare: ₹20
+
+Name: Sita
+Pickup: 2, Drop: 5
+Distance: 3 km
+Fare: ₹15
+
+Name: John
+Pickup: 1, Drop: 10
+Distance: 9 km
+Fare: ₹45
+
+------------------
+Total Fare Collected: ₹80
+Passenger who paid the maximum fare: John (₹45)
