@@ -100,10 +100,7 @@ Highest Ticket Price: 7200
 Lowest Ticket Price: 4500
 Percentage of passengers going to London: 40%
 -----------------
-
-
-
-
+import java.util.Arrays;
 import java.util.Scanner;
 class Passenger{
 	String name,seatNumber,dest;
@@ -129,9 +126,10 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter no of passengers: ");
 		int no_of_passengers = Integer.parseInt(sc.nextLine());
-		
+		int total = 0,highest = Integer.MIN_VALUE
+				,lowest = Integer.MAX_VALUE,age = 0;
 		Passenger [] p = new Passenger[no_of_passengers];
-		
+		String passengerNames [] = new String[no_of_passengers];
 		for(int i=0;i<p.length;i++)
 		{
 			//john doe   , 32 , 15A , London , 5500
@@ -141,7 +139,7 @@ public class Main {
 			String data = sc.nextLine().trim();
 			
 			String passengerData[] = data.split(",");
-			
+			passengerNames[i] = convertTitle(passengerData[0].trim().toLowerCase());
 			p[i] = new Passenger(
 					convertTitle(passengerData[0].trim().toLowerCase()),
 					Integer.parseInt(passengerData[1].trim()),
@@ -149,12 +147,79 @@ public class Main {
 					passengerData[3].trim(),
 					Integer.parseInt(passengerData[4].trim())
 					);
+			if(p[i].price>highest)
+				highest = p[i].price;
+			if(p[i].price<lowest)
+				lowest = p[i].price;
+			total += p[i].price;
+			age += p[i].age;
 		}
-		for(Passenger currPassenger:p)
+		
+		System.out.println("Enter Dest");
+		String destination = sc.nextLine();
+		
+		for(Passenger curr: p)
 		{
-			System.out.println(currPassenger.toString());
+			if(curr.dest.equalsIgnoreCase(destination))
+			{
+				System.out.println(curr.name);
+			}
 		}
-			
+		
+		System.out.println("Enter starting letter for names:");
+		String start = sc.nextLine();
+		for(Passenger curr: p)
+		{
+			if(curr.name.startsWith(start.toUpperCase()))
+			{
+				System.out.println(curr.name);
+			}
+		}
+		
+		System.out.println("Enter Minimum Age");
+		int reAge = Integer.parseInt(sc.nextLine());
+		for(Passenger curr: p)
+		{
+			if(curr.age>=reAge)
+			{
+				System.out.println(curr.name);
+			}
+		}
+		Arrays.sort(passengerNames);
+		
+		for(String currName : passengerNames)
+			System.out.println(currName);
+		
+		System.out.println("Enter Name");
+		String passName = sc.nextLine();
+		
+		for(Passenger curr: p)
+		{
+			if(curr.name.equalsIgnoreCase(passName))
+			{
+				System.out.println(curr.seatNumber);
+			}
+		}
+		
+		
+		System.out.println("Average Age : "+(age/no_of_passengers));
+		System.out.println("Total :"+total);
+		System.out.println("Highest fare : "+highest);
+		System.out.println("Lowest Fare : "+lowest);
+		
+		System.out.println("Enter Dest");
+		destination = sc.nextLine();
+		int count = 0;
+		for(Passenger curr: p)
+		{
+			if(curr.dest.equalsIgnoreCase(destination))
+			{
+				count++;
+			}
+		}
+		System.out.println(count);
+		System.out.println("Percentage of passengers going to"
+				+ " "+destination+" : "+(int)((count/(float)no_of_passengers)*100)+"%");
 	}
 
 	private static String convertTitle(String name) {
@@ -179,4 +244,3 @@ public class Main {
 		return res;
 	}
 }
-
