@@ -99,3 +99,84 @@ Total Ticket Revenue: 31000
 Highest Ticket Price: 7200
 Lowest Ticket Price: 4500
 Percentage of passengers going to London: 40%
+-----------------
+
+
+
+
+import java.util.Scanner;
+class Passenger{
+	String name,seatNumber,dest;
+	int age,price;
+	Passenger(String name,int age,String seatNum,
+			String dest,int price)
+	{
+		this.name = name;
+		this.age = age;
+		this.seatNumber = seatNum;
+		this.dest = dest;
+		this.price = price;
+	}
+	public String toString() {
+		return "Passenger [name=" + name + ", seatNumber=" + seatNumber + ", dest=" + dest + ", age=" + age + ", price="
+				+ price + "]";
+	}
+	
+}
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter no of passengers: ");
+		int no_of_passengers = Integer.parseInt(sc.nextLine());
+		
+		Passenger [] p = new Passenger[no_of_passengers];
+		
+		for(int i=0;i<p.length;i++)
+		{
+			//john doe   , 32 , 15A , London , 5500
+			//john doe,32,15A,London,5500
+//			String data = sc.nextLine().trim()
+//					.replaceAll("\\s*,\\s*",",");
+			String data = sc.nextLine().trim();
+			
+			String passengerData[] = data.split(",");
+			
+			p[i] = new Passenger(
+					convertTitle(passengerData[0].trim().toLowerCase()),
+					Integer.parseInt(passengerData[1].trim()),
+					passengerData[2].trim(),
+					passengerData[3].trim(),
+					Integer.parseInt(passengerData[4].trim())
+					);
+		}
+		for(Passenger currPassenger:p)
+		{
+			System.out.println(currPassenger.toString());
+		}
+			
+	}
+
+	private static String convertTitle(String name) {
+		//john doe
+		boolean space = true;
+		String res = "";
+		for(int i =0;i<name.length();i++)
+		{
+			char ch = name.charAt(i);//' '
+			if(space)
+			{
+				res += Character.toUpperCase(ch);//"John D"
+				space = false;
+			}
+			else
+			{
+				if(ch==' ')
+					space = true;
+				res += ch;
+			}
+		}
+		return res;
+	}
+}
+
