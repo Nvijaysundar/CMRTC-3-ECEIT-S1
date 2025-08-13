@@ -1,0 +1,101 @@
+An airline stores passenger details in a system for a single flight. Each passenger's data is stored in the format:
+
+Name,Age,SeatNumber,Destination,TicketPrice
+
+Example:
+John Doe,32,15A,London,5500
+
+Your task is to create a Java program that:
+
+1. Data Input
+
+* Accept N passenger records as strings from the user and store them in a String array.
+
+2. String Operations
+
+* Clean: Remove extra spaces around commas and words (trim + replaceAll).
+* Split: Use split(",") to separate Name, Age, Seat, Destination, TicketPrice.
+* Format Names: Convert passenger names to Title Case.
+* Find:
+
+  * Passengers going to a specific destination (case-insensitive).
+  * Passengers whose names start with a certain letter.
+  * Passengers above a certain age.
+
+3. Array Operations
+
+* Store only names in a separate array for alphabetical sorting.
+* Sort passengers by name and display them in order.
+* Reverse the sorted array.
+* Search for a passenger by name and return their seat number.
+* Count total passengers per destination.
+
+4. Mathematical Operations
+
+* Calculate the average age of all passengers.
+* Calculate the total ticket revenue for the flight.
+* Find the highest and lowest ticket price.
+* Calculate the percentage of passengers traveling to a specific destination.
+
+Example Input:
+Enter number of passengers: 5
+Enter passenger details:
+john doe , 32 , 15A , London , 5500
+ALICE SMITH, 28, 10B, New York, 7200
+michael jordan , 45 , 1A , London , 6800
+robert brown, 36, 3C, Paris , 4500
+anna bell, 29, 14B, New York , 7000
+
+Enter destination to filter: London
+Enter starting letter for names: A
+Enter minimum age: 30
+Enter name to search seat: Alice Smith
+
+Example Output:
+Formatted Passenger List:
+John Doe, 32, 15A, London, 5500
+Alice Smith, 28, 10B, New York, 7200
+Michael Jordan, 45, 1A, London, 6800
+Robert Brown, 36, 3C, Paris, 4500
+Anna Bell, 29, 14B, New York, 7000
+
+Passengers going to 'London':
+John Doe
+Michael Jordan
+
+Passengers starting with 'A':
+Alice Smith
+Anna Bell
+
+Passengers above age 30:
+John Doe
+Michael Jordan
+Robert Brown
+
+Sorted Passenger Names:
+Alice Smith
+Anna Bell
+John Doe
+Michael Jordan
+Robert Brown
+
+Reversed Sorted Passenger Names:
+Robert Brown
+Michael Jordan
+John Doe
+Anna Bell
+Alice Smith
+
+Seat number of 'Alice Smith': 10B
+
+Passengers per Destination:
+London - 2
+New York - 2
+Paris - 1
+
+Mathematical Results:
+Average Age: 34
+Total Ticket Revenue: 31000
+Highest Ticket Price: 7200
+Lowest Ticket Price: 4500
+Percentage of passengers going to London: 40%
