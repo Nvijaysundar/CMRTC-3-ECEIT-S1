@@ -1,0 +1,144 @@
+Scenario 1: Smart City Bus Route Planner
+
+In a growing smart city, the municipal transport department keeps a daily log of bus trips to track routes, drivers, stops, fares, and passenger counts.
+Each day’s records arrive from different depots in a slightly messy text format, where the route number, driver name, list of stops, fare, and passenger count are separated by special symbols.
+
+The data is not always neat — some names have inconsistent spacing, route numbers need to be presented in a stylized way for display boards, and the list of stops for each trip must be shown in order to passengers. The department also wants to prepare a clean summary that links all route numbers together for a visual schedule.
+
+From the trip details, the department prepares a report showing for each trip:
+
+* The route number in a display-friendly reversed format.
+* The driver’s name with a service status tag added.
+* The stops in sequence, shown neatly for public display.
+* The money earned for the trip, calculated from the fare and passenger count.
+
+Once the details for all trips are prepared, they are arranged in order of total earnings, so that the most profitable routes are at the top. Occasionally, the top-earning trip is highlighted and moved to the front of the official list for special recognition.
+
+From all the day’s trips, the department calculates:
+
+* The combined revenue for the day.
+* The average number of passengers per trip.
+* Which route offered the cheapest ride for a passenger.
+* How many unique stops were served across all trips combined.
+
+At the end of the day, all cleaned and formatted route numbers are linked into a single continuous string with arrows, ready to be printed on the city’s evening transport bulletin.
+
+Sample Input:
+3
+B12|John Mathews|Central,Park Street,City Mall|15.5|45
+B45|Alice Green|North Point,Old Town|20|38
+B33|Robert Brown|Central,City Mall,Airport Terminal,West End|12|50
+
+Sample Output:
+Trip 1: Route 21B, Driver: John Mathews (On Duty)
+Stops: Central, Park Street, City Mall
+Earnings: 697.5
+
+Trip 2: Route 54B, Driver: Alice Green (On Duty)
+Stops: North Point, Old Town
+Earnings: 760.0
+
+Trip 3: Route 33B, Driver: Robert Brown (On Duty)
+Stops: Central, City Mall, Airport Terminal, West End
+Earnings: 600.0
+
+All Routes: 21B -> 54B -> 33B
+
+Sorted by Earnings:
+B45, Alice Green, 760.0
+B12, John Mathews, 697.5
+B33, Robert Brown, 600.0
+
+Total Revenue: 2057.5
+Average Passengers: 44.33
+Cheapest Fare: 12.0 (Route B33)
+Total Unique Stops: 9
+
+
+Scenario 2: Hospital Shift Management System
+
+A large hospital manages daily shifts for doctors and nurses across different departments. Each shift record comes in as a string containing the shift ID, staff member’s full name, department, shift timing, and number of patients handled.
+
+These details are often sent from different wards, so names may have inconsistent formatting, departments might have extra spaces, and timings may have mixed formats. For display on the hospital dashboard, the names need proper formatting, department names should be aligned, and shift IDs should have a unique style for quick recognition.
+
+From each shift entry, the system prepares a display showing:
+
+* The shift ID in a highlighted form.
+* The staff member’s name with a role tag (Doctor/Nurse).
+* The department name in a clean format.
+* The shift timing in a standardized HH\:MM format.
+* The number of patients handled.
+
+Once all shifts are processed, they are arranged by the number of patients served in descending order, and the top shift is displayed in bold on the main board.
+
+From all shifts in the day, the hospital calculates:
+
+* Total patients handled.
+* Average patients per shift.
+* Which shift had the shortest duration.
+* Which department handled the maximum number of patients.
+
+Sample Input:
+3
+S101|Dr. Alice Smith| Cardiology | 9:0 - 13:30 | 25
+S102|Nurse Robert Brown|Emergency|8:15-12:45|30
+S103|Dr. Michael Jordan|Neurology|10:5 - 14:0|20
+
+Sample Output:
+Shift 1: ID S101, Dr. Alice Smith (Doctor), Cardiology, 09:00 - 13:30, Patients: 25
+Shift 2: ID S102, Nurse Robert Brown (Nurse), Emergency, 08:15 - 12:45, Patients: 30
+Shift 3: ID S103, Dr. Michael Jordan (Doctor), Neurology, 10:05 - 14:00, Patients: 20
+
+Sorted by Patients Served:
+S102, Nurse Robert Brown, 30
+S101, Dr. Alice Smith, 25
+S103, Dr. Michael Jordan, 20
+
+Total Patients: 75
+Average Patients: 25.0
+Shortest Shift Duration: 4h 0m (S103)
+Department with Most Patients: Emergency (30)
+
+Scenario 3: Sports League Match Tracker
+
+A sports league keeps daily match records for multiple teams. Each record includes the match code, team names, score for each team, location, and duration of the match.
+
+The records come from various stadiums and are not consistent — team names may be in uppercase or lowercase, locations may have extra spaces, and scores may be separated by unusual symbols. For public display, all names are cleaned, scores are clearly formatted, and match codes are displayed in a decorative way.
+
+From each match entry, the system shows:
+
+* The match code in stylized form.
+* Team names in title case.
+* The match location cleaned up.
+* The scores in a clear “Team A X - Y Team B” format.
+* The winner’s name.
+
+After processing, matches are arranged by the total points scored in descending order. The highest-scoring match is highlighted for media coverage.
+
+From all matches in a day, the league compiles:
+
+* Total goals scored in the day.
+* Average goals per match.
+* The match with the lowest scoring difference.
+* The location that hosted the most total goals.
+
+Sample Input:
+3
+M001|EAGLES vs tigers| 3 @ 2 | National Arena | 90
+M002|Sharks vs Whales| 1 @ 1 | Ocean Stadium | 95
+M003|falcons vs lions| 4 @ 3 | City Ground | 88
+
+Sample Output:
+Match 1: M001, Eagles 3 - 2 Tigers, National Arena, Winner: Eagles
+Match 2: M002, Sharks 1 - 1 Whales, Ocean Stadium, Winner: Draw
+Match 3: M003, Falcons 4 - 3 Lions, City Ground, Winner: Falcons
+
+Sorted by Total Goals:
+M003, Falcons vs Lions, 7 goals
+M001, Eagles vs Tigers, 5 goals
+M002, Sharks vs Whales, 2 goals
+
+Total Goals: 14
+Average Goals per Match: 4.67
+Lowest Goal Difference: 0 (M002)
+Location with Most Goals: City Ground (7)
