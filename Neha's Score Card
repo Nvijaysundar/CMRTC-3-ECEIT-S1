@@ -1,0 +1,20 @@
+
+Neha is preparing her personal progress report using scores she received from mock tests over the past month. She records them all at once, but now she wants to display the scores in a neat, 
+ascending order before pasting them into her diary.
+Since she prefers to sort them by a method she recently learned from her tutor, she asks for your help to reorder the scores manually.
+Can you help Neha sort her scores for the report?
+ Input Format:
+•	First line: Integer n (number of scores)
+•	Second line: n space-separated integers
+ Output Format:
+•	Sorted scores in ascending order (space-separated)
+Sample Input:
+4
+5 1 4 2
+Sample Output:
+1 2 4 5
+Sample Input:
+4
+1 2 3 4
+Sample Output:
+1 2 3 4
