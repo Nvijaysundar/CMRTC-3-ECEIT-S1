@@ -1,0 +1,21 @@
+A historic library is known for its centuries-old system of cataloging books using numeric tags. Recently, a digital transformation is underway. To test the new system, the head librarian selects a sorted list of book tag numbers from a shelf and wants to quickly locate a particular volume that was misplaced.
+She feeds the sorted list into the system and enters the ID of the book she wants to find. The system must return the exact position of the book on the shelf or confirm it is missing.
+Given the catalog and the target book's ID, help the librarian identify the correct position.
+ Input Format:
+•	First line: Integer n representing number of books
+•	Second line: n space-separated sorted integers representing the catalog numbers
+•	Third line: Integer key (book ID to find)
+ Output Format:
+•	Index of the book if found; otherwise, -1
+Sample Input:
+6
+11 22 33 44 55 66
+44
+Sample Output:
+3
+Sample Input:
+6
+11 22 33 44 55 66
+77
+Sample Output:
+-1 
