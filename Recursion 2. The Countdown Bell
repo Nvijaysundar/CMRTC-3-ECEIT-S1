@@ -1,0 +1,20 @@
+Every evening in the old village temple, a bell is rung before the evening prayers begin. 
+The bell rings in a countdown fashion, starting from a large number chosen by the priest and going down to one. 
+This countdown echoes through the valley, and villagers wait eagerly to hear it before lighting their lamps. 
+Sometimes the priest forgets to strike the bell, so the temple caretaker thought of using a small program to perform the task. 
+The program should accept the starting number and ring out every number until one. If the number is not valid, the program must indicate that no countdown is possible. 
+The caretaker wants this to be reliable since the prayers cannot begin without it.
+Input Format
+  Single integer N.
+Output Format
+  Print numbers from N to 1, separated by space.
+Constraints
+    1 ≤ N ≤ 1000
+Sample Test Cases Input
+5
+Output
+5 4 3 2 1
+Input
+0
+Output
+No countdown possible  
