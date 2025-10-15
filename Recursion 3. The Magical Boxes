@@ -1,0 +1,18 @@
+A traveling magician entertains people with his mysterious collection of boxes. He shows the audience one large box and says that inside it lies an even greater surprise. 
+When he opens it, there is another box, and inside that, another, and so on. Each box multiplies the magic power, and the audience waits eagerly to know the final strength of all the boxes combined. 
+To calculate this, the magician needs a program that can take the total number of boxes and compute the power hidden inside them. If there are no boxes, the magic is simply one.
+  The magician smiles and says, “Only those who can solve this puzzle can unlock the full power of my show.”
+Input Format
+  Single integer N.
+Output Format
+  The product of all numbers from 1 to N.
+Constraints
+  0 ≤ N ≤ 15
+Sample Test Cases Input
+5
+Output
+120
+Input
+0
+Output
+1
