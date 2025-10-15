@@ -1,0 +1,20 @@
+Long ago, a farmer kept rabbits in his barn and noticed something unusual about how they reproduced. 
+Each new pair of rabbits took one month to grow up, and from the second month onwards, each pair produced another pair every month. 
+The farmer became curious to know how many pairs of rabbits he would have in a given month if this pattern continued. 
+His son decided to write a small program to calculate the number of rabbit pairs in the Nth month. 
+The villagers called this the “family tree of rabbits,” as it kept growing endlessly. 
+The farmer uses this number to plan how much food he must store in advance. Everyone in the village started asking him about the rabbit family tree for different months.
+Input Format
+  Single integer N.
+Output Format
+  Print the Nth rabbit family number.
+Constraints
+  1 ≤ N ≤ 45
+Sample Test Cases Input
+6
+Output
+8
+Input
+1
+Output
+1
