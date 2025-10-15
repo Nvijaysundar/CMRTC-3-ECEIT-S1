@@ -1,0 +1,22 @@
+Ravi has just returned from college and is rushing to get ready for his evening football game. He tosses his bag on the bed and begins searching for the key to his bicycle lock.
+The room is a mess—books on the table, clothes on the chair, gadgets on the floor. He recalls that he might have dropped the key somewhere around the corners while unpacking.
+His plan is simple: he decides to check every spot he can think of, one by one, in the same order he usually drops things.
+Given a list of possible places Ravi checks and the item he is looking for, help determine where exactly the key is found (if at all).
+ Input Format:
+•	First line: An integer n representing the number of places he checks.
+•	Second line: n space-separated integers representing the unique code assigned to each place.
+•	Third line: An integer x representing the code of the location where the key might be.
+ Output Format:
+•	Index (0-based) of the location if the key is found; otherwise, -1.
+Sample Input:
+5
+101 203 305 407 509
+305
+Sample Output:
+2
+Sample Input:
+5
+101 203 305 407 509
+999
+Sample Output:
+-1 
