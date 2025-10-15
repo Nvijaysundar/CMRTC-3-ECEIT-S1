@@ -1,0 +1,20 @@
+
+The school administration has gathered final exam marks for a batch of students. Unfortunately, due to a system migration, the marks are currently stored in an unsorted list. 
+Before announcing the toppers and organizing the convocation ceremony, the administration wants to publish an official rank list from the lowest to the highest score.
+To maintain transparency and fairness, every student's name will appear on the rank list in sorted order of their marks. 
+You’ve been given the responsibility of helping the administration arrange the marks correctly.
+ Input Format:
+•	First line: Integer n (number of students)
+•	Second line: n space-separated integers (marks)
+ Output Format:
+•	Sorted marks in ascending order (space-separated)
+ Sample Input:
+5
+50 20 40 10 30
+ Sample Output:
+10 20 30 40 50
+Sample Input:
+4
+50 50 50 50
+Sample Output:
+50 50 50 50
