@@ -1,0 +1,20 @@
+In a village school, the teacher gives a daily challenge to her students to improve their number writing skills. 
+Today she asks them to write all the numbers starting from the very first natural number up to a number of their choice. 
+The children usually stop in the middle, so she wants a program that ensures no number is skipped. She also believes that using such a method will help her check the discipline of the students. \
+The teacher announces that anyone who writes the entire sequence correctly will receive a shiny star sticker on their notebook. 
+The children are excited and decide to use the computer to solve this task quickly. The computer must display the entire sequence neatly from the first number to the last one.
+Input Format
+  Single integer N.
+Output Format
+  Print numbers from 1 to N, separated by space.
+Constraints
+  1 ≤ N ≤ 1000
+Sample Test Cases Input
+6
+Output
+1 2 3 4 5 6
+Input
+0
+Output
+
+No numbers to show
