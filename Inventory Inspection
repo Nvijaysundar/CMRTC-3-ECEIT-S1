@@ -1,0 +1,20 @@
+ 
+An online grocery warehouse updates its stock prices daily. The warehouse manager suspects the update script might be introducing inconsistencies. To ensure everything is running smoothly,
+you are given a snapshot of the current prices for a specific category of products.
+You need to examine whether the price list was updated in the correct order. If any price is lower than the one before it, the update process must have malfunctioned.
+Help the manager by verifying the sequence of prices.
+ Input Format:
+•	First line: Integer n (number of items)
+•	Second line: n space-separated integers representing item prices
+ Output Format:
+•	Print Yes if sorted in ascending order; otherwise, print No
+Sample Input:
+5
+10 20 30 40 50
+Sample Output:
+Yes
+Sample Input:
+5
+10 30 20 40 50
+Sample Output:
+No
