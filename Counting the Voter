@@ -1,0 +1,22 @@
+During the state elections, a team is tasked with validating the turnout of citizens using their unique voter ID numbers. 
+The IDs were collected digitally from multiple booths across the city and merged into one dataset.
+A specific citizen claims to have voted multiple times due to a technical error. To verify this claim, the team needs to count how many times this citizen's voter ID appears in the list.
+Can you assist the election team in verifying this claim by counting the occurrences of a given voter ID?
+ Input Format:
+•	First line: Integer n (number of entries)
+•	Second line: n space-separated integers (voter IDs)
+•	Third line: Integer x (voter ID to count)
+ Output Format:
+•	Integer representing the number of occurrences
+Sample Input:
+7
+101 105 101 103 101 102 104
+101
+Sample Output:
+3
+Sample Input:
+7
+101 105 101 103 101 102 104
+999
+Sample Output:
+0
